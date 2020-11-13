@@ -12,7 +12,6 @@ int main()
         a1[1]++;
     for (int i=y;i<y1;i++)
     {
-        printf("%d ",i);
         if ((i%100!=0 && i%4==0)||i%400==0){
             s+=366;}
         else{
