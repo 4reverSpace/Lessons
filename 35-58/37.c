@@ -1,6 +1,6 @@
 int fib(int a, int b,int n)
 {
-     if (n<=0)          // проверка счетчика
+     if (n<=0)          // 
         printf("Error");
      else if (n==1)
         printf("%d",a);
