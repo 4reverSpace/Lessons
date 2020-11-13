@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> // пожалуйста, не проверяйте пока, написано с помощью костылей
 #include <malloc.h>
 int pow(int a)
 {
