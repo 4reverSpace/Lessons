@@ -1,8 +1,8 @@
 int main(void)
 {
-     int a,b,n ;// n- до какого числа выводить
+     int a,b,n ;// n- РґРѕ РєР°РєРѕРіРѕ С‡РёСЃР»Р°
      scanf("%d %d %d",&a,&b,&n);
-     if (n<=0)          // проверка счетчика
+     if (n<=0)          
         printf("Error");
      else if (n==1)
         printf("%d",a);
