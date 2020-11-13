@@ -1,9 +1,5 @@
-#include <stdio.h> // пожалуйста, не проверяйте пока, написано с помощью костылей
+#include <stdio.h> 
 #include <malloc.h>
-int pow(int a)
-{
-	return(a * a);
-}
 int* Massive(int* b,int a)
 {
 	int* f = (int*)malloc(sizeof(int) * a);
@@ -18,6 +14,7 @@ int* Massive(int* b,int a)
 		*(f+i)=d;
 	}
 	return(f);
+	free(f);
 }
 int main()
 {
