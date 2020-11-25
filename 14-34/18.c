@@ -6,7 +6,18 @@ int main()
     scanf("%lf %lf %lf",&a, &b, &c);
     double D = b*b - 4*a*c;
     if (a == 0.0)
-        printf("Error");
+    {
+        if (b==0)
+        {
+            if (c == 0)
+                printf("Infinite");
+            else
+                printf("No solves");
+        }
+        else
+            printf("%lf",-1*c/b);
+
+    }
     else
     {
         if (D < 0)
