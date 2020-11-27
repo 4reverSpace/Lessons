@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main(void) {
+	long double t=1;
+	while(1==1)
+	{
+		if (1+t/2==1 && 1+t!=1)
+			break;
+		t/=2;
+	}
+	printf("%0.30llf\n",t/2);
+	printf("%0.30llf\n",1+t/2);
+	printf("%0.30llf\n",t+1);
+	printf("%0.30llf",t+t/2+1);
+	return 0;
+}
