@@ -2,10 +2,8 @@
  
 int main(void) {
 	long double t=1;
-	while(1==1)
+	while(1+t/2==1 && 1+t!=1)
 	{
-		if (1+t/2==1 && 1+t!=1)
-			break;
 		t/=2;
 	}
 	printf("%0.30llf\n",t/2);
