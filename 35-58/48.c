@@ -15,4 +15,5 @@ int main()
         p*=a[i];
     }
     printf("%lf - arifm %lf - geom",s*1.0/n,pow(p*1.0,1.0/n));
+    return(0);
 }
