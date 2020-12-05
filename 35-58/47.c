@@ -20,4 +20,5 @@ int main()
             min=a[i];
     }
     printf("min=%d max=%d",min, max);
+    return(0);
 }
