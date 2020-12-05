@@ -54,4 +54,5 @@ int main()
     double n;
     scanf("%lf",&n);
     printf("%.15f  %.15f ",sin(n), cos(n));
+    return(0);
 }
