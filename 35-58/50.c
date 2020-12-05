@@ -22,4 +22,5 @@ int main()
         c[i]=b[i-n];
     for (int i=0;i<v;i++)
         printf("%d ",c[i]);
+    return(0);
 }
