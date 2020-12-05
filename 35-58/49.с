@@ -13,3 +13,5 @@ int main()
             s+=1;
     }
     printf("%d",s);
+    return(0);
+   }
