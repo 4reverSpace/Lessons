@@ -49,4 +49,5 @@ int main(void)
     int x,n;
     scanf("%d %d",&x,&n);
     printf("%lf",exp(x,n));
+    return(0);
 }
