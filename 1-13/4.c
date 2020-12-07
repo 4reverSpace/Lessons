@@ -1,12 +1,22 @@
 #include <stdio.h>
-int main()
-{
-    int n;
+#include <math.h>
+
+int main(void) {
+    int n,ind=-1;
     scanf("%d",&n);
-    for(int i=1;i<=n;i++)
-    {
+    int c=ceil(log2(n));
+    int a[c];
+    for (int i=1;i<=sqrt(n);i++){
         if (n%i==0)
+        {
+            ind ++;
+            a[ind]=i;
             printf("%d ",i);
+        }
     }
-    return(0);
+    if(sqrt(n)==a[ind])
+        ind--;
+    for (int j=ind;j>=0;j--)
+        printf("%d ",n/a[j]);
+    return 0;
 }
