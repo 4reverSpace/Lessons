@@ -3,7 +3,7 @@ int main()
     int n;
     scanf("%d",&n);
     int a[n];
-    for (int i=0;i<n;i++) // ââîä ìàññèâà
+    for (int i=0;i<n;i++) // Ã¢Ã¢Ã®Ã¤ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã 
     {
         scanf("%d",&a[i]);
     }
@@ -22,4 +22,5 @@ int main()
     }
     for (int i=0;i<n;i++)
         printf("%d ",a[i]);
+    return(0);
 }
