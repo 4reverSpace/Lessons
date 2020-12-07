@@ -21,4 +21,5 @@ int main()
         printf("%lf",(a[n/2]+a[n/2-1])/2.0);
     else
         printf("%d",a[n/2]);
+    return(0);
 }
