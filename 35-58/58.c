@@ -1,27 +1,21 @@
-int notin(long long int *a,long long int b)
-{
-    for ( int i=0;i<sizeof(a)/sizeof(long long int);i++)
-        if (b%a[i]==0)
-        return(0);
-    return(1);
-
-}
-
+#include "stdio.h"
 int main()
 {
-    int n,i=0;
+    int n;
     scanf("%d",&n);
-    long long int a[n],j=2;
-    while(i<n)
-    {
-        if (notin(a,j))
-        {
-           a[i]=j;
-           i++;
-        }
-        j++;
-    }
+    int a[n];
     for (int i=0;i<n;i++)
-        printf("%lld ",a[i]);
+        a[i]=i+1;
+    for (int i=1;i<n;i++)
+    {
+        if (a[i])
+        {
+            for(int h=i+1;h<n;h++){
+                if (a[h]%a[i]==0 )
+                    a[h]=0;
+            }
+            printf("%d ",a[i]);
+        }
+    }
     return(0);
 }
