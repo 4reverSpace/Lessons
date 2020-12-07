@@ -14,7 +14,7 @@ int main()
         swap(a,b);
     else if(c>a && c>b)
         swap(a,c);
-    if (2*a<b+c)
+    if (a<b+c)
     {
         if (a==b && b==c)
             printf("Equilateral triangle");
