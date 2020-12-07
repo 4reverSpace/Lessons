@@ -23,4 +23,5 @@ int main()
     }
     for (int i=0;i<n;i++)
         printf("%lld ",a[i]);
+    return(0);
 }
