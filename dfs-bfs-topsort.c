@@ -148,9 +148,6 @@ int main ()
             scanf("%d", &graph[a][b]);
         }
     }
-    int* dist = (int*)malloc(sizeof(int) * i);
-    for (int j = 0 ; j < i ; j++)
-        dist[j] = -1;
     int *seen = (int *) malloc(sizeof(int) * i);
     int * stack = (int * ) malloc(sizeof(int) * i);
     for (int a = 0; a < i; a++)
@@ -161,9 +158,9 @@ int main ()
             stack [0] = a ;
             bfs(graph, a, i, seen, stack);
         }
-    }
-    free(dist);
+    };
     free(seen);
+    free(stack);
     for (int a = 0; a < i; a++)
         free(graph[a]);
     free(graph);
