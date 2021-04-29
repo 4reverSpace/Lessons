@@ -85,7 +85,7 @@ int main (){
  */
 
 /*
-void bfs(int** graph , int vertex , int size, int* seen) {
+void dfs(int** graph , int vertex , int size, int* seen) {
     seen[vertex]--;
     printf("%d ",vertex+1);
     for (int i = 0; i < size; i++) {
@@ -110,7 +110,7 @@ int main () {
     for (int a = 0 ; a < i ;a ++)
     {
         if(seen[a])
-            bfs(graph,a ,i ,seen);
+            dfs(graph,a ,i ,seen);
     }
     free(seen);
     for (int a = 0; a < i; a++)
@@ -119,19 +119,20 @@ int main () {
     return 0;
 } */
 
-/*void dfs (int ** graph , int vertex ,int size , int * seen, int * stack )
+void bfs (int ** graph , int vertex ,int size , int * seen, int * stack )
 {
-    int last_in_stack = 0 ;
-    while(last_in_stack!=-1)
+    int first_in_stack = 0 ;
+    int last_in_stack = 1 ;
+    while(last_in_stack!=first_in_stack)
     {
-        printf("%d ",stack[last_in_stack]+1);
-        last_in_stack--;
+        printf("%d ",stack[first_in_stack]+1);
+        first_in_stack++;
         for(int i = 0 ; i <size ; i ++)
         {
             if (graph[vertex][i] && seen[i]){
                 seen[i]--;
                 last_in_stack++;
-                stack[last_in_stack] = i;
+                stack[last_in_stack-1] = i;
             }
         }
     }
@@ -147,6 +148,9 @@ int main ()
             scanf("%d", &graph[a][b]);
         }
     }
+    int* dist = (int*)malloc(sizeof(int) * i);
+    for (int j = 0 ; j < i ; j++)
+        dist[j] = -1;
     int *seen = (int *) malloc(sizeof(int) * i);
     int * stack = (int * ) malloc(sizeof(int) * i);
     for (int a = 0; a < i; a++)
@@ -155,10 +159,10 @@ int main ()
     {
         if(seen[a]) {
             stack [0] = a ;
-            dfs(graph, a, i, seen, stack);
+            bfs(graph, a, i, seen, stack);
         }
     }
-
+    free(dist);
     free(seen);
     for (int a = 0; a < i; a++)
         free(graph[a]);
