@@ -58,7 +58,7 @@ void DrawCalendar(int year) {
 
     sf::Text day ;
     sf::Font font;
-    font.loadFromFile("C:/Users/79028/Desktop/Scripts/C++/AllerDisplay.ttf");
+    font.loadFromFile("AllerDisplay.ttf");
     day.setFont(font);
     day.setFillColor(sf::Color::Black);
     day.setCharacterSize(22);
@@ -127,7 +127,7 @@ int main()
     sf::String playerInput;
 
     sf::Font font;
-    if (!font.loadFromFile("C:/Users/79028/Desktop/Scripts/C++/AllerDisplay.ttf"))
+    if (!font.loadFromFile("AllerDisplay.ttf"))
     {
         return -1;
     }
